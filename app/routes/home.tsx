@@ -1,13 +1,13 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import React from "react";
+import { Pokedex } from "../pokedex/pokedex";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Pokédex - Pokemon Explorer" },
+    { name: "description", content: "Explore information about Pokemon using the Pokédex" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <Pokedex />;
 }

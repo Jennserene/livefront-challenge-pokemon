@@ -3,11 +3,17 @@
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",
-    ".react-router/types/**/*"
+    ".react-router/types/**/*",
+    "app/utils/pokeapi-js-wrapper-sw.ts"
   ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["node", "vite/client"],
+    "lib": ["DOM", "DOM.Iterable", "ES2022", "WebWorker"],
+    "types": [
+      "node",
+      "vite/client",
+      "vite-plugin-terminal/client",
+      "jest"
+    ],
     "target": "ES2022",
     "module": "ES2022",
     "moduleResolution": "bundler",

@@ -1,18 +1,17 @@
-# Welcome to React Router!
+# Pokemon Explorer
 
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+A modern React application for exploring Pokemon using the PokeAPI, built with React Router and TypeScript.
 
 ## Features
 
+- 🎮 Browse and search Pokemon
 - 🚀 Server-side rendering
 - ⚡️ Hot Module Replacement (HMR)
 - 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
+- 🔄 Offline-ready with Service Worker caching
 - 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- 🎨 TailwindCSS for styling
+- 🧪 Jest & React Testing Library for testing
 
 ## Getting Started
 
@@ -34,6 +33,14 @@ npm run dev
 
 Your application will be available at `http://localhost:5173`.
 
+### Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
 ## Building for Production
 
 Create a production build:
@@ -49,10 +56,10 @@ npm run build
 To build and run using Docker:
 
 ```bash
-docker build -t my-app .
+docker build -t pokemon-explorer .
 
 # Run the container
-docker run -p 3000:3000 my-app
+docker run -p 3000:3000 pokemon-explorer
 ```
 
 The containerized application can be deployed to any platform that supports Docker, including:
@@ -68,20 +75,38 @@ The containerized application can be deployed to any platform that supports Dock
 
 If you're familiar with deploying Node applications, the built-in app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `npm run build`:
 
 ```
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── package-lock.json
 ├── build/
 │   ├── client/    # Static assets
 │   └── server/    # Server-side code
 ```
 
-## Styling
+## Project Structure
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+```
+├── app/
+│   ├── components/    # Reusable UI components
+│   ├── pokedex/      # Pokedex-specific components
+│   ├── routes/       # Route components
+│   └── utils/        # Utility functions and helpers
+├── public/           # Static assets
+└── tests/           # Test files
+```
+
+## Tech Stack
+
+- React
+- React Router
+- TypeScript
+- Tailwind CSS
+- Vite
+- Jest
+- PokeAPI
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router and PokeAPI
