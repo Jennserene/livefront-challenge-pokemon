@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { capitalizeFirstLetter, getPokemonImageUrl, getFallbackPokemonImageUrl } from '../utils/string';
 import { PokemonTypeFlag } from '../components/pokemon/pokemon-type-flag';
+import { Image } from '../components/ui/image';
 import type { PokemonType } from '../types/pokemon';
 
 interface PokedexCardProps {
@@ -22,11 +23,10 @@ export function PokedexCard({ id, name, imageUrl, types = [] }: PokedexCardProps
         className="flex flex-col items-center p-4 border rounded-lg hover:shadow-lg transition-all duration-300 bg-white dark:bg-gray-800 group"
       >
         <div className="w-24 h-24 flex items-center justify-center overflow-hidden">
-          <img
+          <Image
             src={imageUrl || primaryImageUrl}
             alt={name}
-            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-            loading="lazy"
+            className="w-full h-full transition-transform duration-300 group-hover:scale-110"
             onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
               const target = e.target as HTMLImageElement;
               if (target.src !== fallbackImageUrl) {

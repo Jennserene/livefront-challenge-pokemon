@@ -5,7 +5,7 @@ import type { PokemonDetail } from "../types/pokemon";
 import { LoadingSpinner } from "../components/ui/loading-spinner";
 import { ErrorMessage } from "../components/ui/error-message";
 import { Button } from "../components/ui/button";
-import { PokemonImage } from "../components/pokemon/pokemon-image";
+import { Image } from "../components/ui/image";
 import { PokemonInfo } from "./pokemon-info";
 import { PokemonTypes } from "./pokemon-types";
 import { PokemonAbilities } from "./pokemon-abilities";
@@ -67,7 +67,7 @@ export function Pokemon() {
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mt-4">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           <div className="flex flex-col items-center">
-            <PokemonImage
+            <Image
               src={getPokemonImageUrl(pokemonData.id)}
               onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
                 const target = e.target as HTMLImageElement;

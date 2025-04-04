@@ -3,12 +3,12 @@ import { PokedexCard } from './pokedex-card';
 import type { PokemonListItem, PokemonDetail } from '../types/pokemon';
 import { extractPokemonIdFromUrl } from '../utils/string';
 
-interface PokemonGridProps {
+interface PokedexGridProps {
   pokemon: PokemonListItem[];
   pokemonDetails?: Record<string, PokemonDetail>;
 }
 
-export function PokedexGrid({ pokemon, pokemonDetails = {} }: PokemonGridProps) {
+export function PokedexGrid({ pokemon, pokemonDetails = {} }: PokedexGridProps) {
   if (!pokemon || pokemon.length === 0) {
     return <p className="text-center">No Pokemon found.</p>;
   }

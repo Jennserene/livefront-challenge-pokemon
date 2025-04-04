@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface PokemonImageProps {
+interface ImageProps {
   src: string;
   alt: string;
   className?: string;
   onError?: React.ReactEventHandler<HTMLImageElement>;
 }
 
-export function PokemonImage({ src, alt, className = '', onError }: PokemonImageProps) {
+export function Image({ src, alt, className = '', onError }: ImageProps) {
   return (
     <img
       src={src}

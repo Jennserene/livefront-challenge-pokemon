@@ -7,12 +7,12 @@ import { LoadingSpinner } from '../components/ui/loading-spinner';
 import { ErrorMessage } from '../components/ui/error-message';
 import { PokedexGrid } from './pokedex-grid';
 
-interface PokemonListProps {
+interface PokedexListProps {
   limit?: number;
   offset?: number;
 }
 
-export function PokedexList({ limit = 151, offset = 0 }: PokemonListProps) {
+export function PokedexList({ limit = 151, offset = 0 }: PokedexListProps) {
   const [pokemonList, setPokemonList] = useState<PokemonListItem[]>([]);
   const [pokemonDetails, setPokemonDetails] = useState<Record<string, PokemonDetail>>({});
   const [loading, setLoading] = useState(true);
