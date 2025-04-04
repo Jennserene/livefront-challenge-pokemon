@@ -6,7 +6,7 @@ import { MemoryRouter } from 'react-router';
 import * as router from 'react-router';
 
 // Mock the API call
-jest.mock('../../../api/pokedex-api');
+jest.mock('../../api/pokedex-api');
 // Mock useParams
 jest.mock('react-router', () => ({
   ...jest.requireActual('react-router'),

@@ -4,7 +4,7 @@ import { PokedexList } from '../pokedex-list';
 import { getPokemonList } from '../../api/pokedex-api';
 import { MemoryRouter } from 'react-router';
 
-jest.mock('../../../api/pokedex-api');
+jest.mock('../../api/pokedex-api');
 
 describe('PokedexList', () => {
   const mockPokemonList = {
