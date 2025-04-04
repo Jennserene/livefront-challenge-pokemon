@@ -1,5 +1,5 @@
 import React from "react";
-import { Pokemon } from "../components/pokemon/pokemon";
+import { Pokemon } from "../pokemon/pokemon";
 
 export function meta({ params }: { params: { id: string } }) {
   return [

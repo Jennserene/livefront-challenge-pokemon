@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, waitFor } from '~/utils/test/test-utils';
 import { Pokemon } from '../pokemon';
-import { getPokemonDetail } from '../../../api/pokedex-api';
+import { getPokemonDetail } from '../../api/pokedex-api';
 import { MemoryRouter } from 'react-router';
 import * as router from 'react-router';
 

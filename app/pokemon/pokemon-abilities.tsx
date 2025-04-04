@@ -1,5 +1,5 @@
 import React from "react";
-import type { PokemonAbility } from '../../types/pokemon';
+import type { PokemonAbility } from '../types/pokemon';
 
 interface PokemonAbilitiesProps {
   abilities: PokemonAbility[];

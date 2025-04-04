@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getPokemonDetail } from "../../api/pokedex-api";
-import type { PokemonDetail } from "../../types/pokemon";
-import { LoadingSpinner } from "../ui/loading-spinner";
-import { ErrorMessage } from "../ui/error-message";
-import { Button } from "../ui/button";
-import { PokemonImage } from "./pokemon-image";
+import { getPokemonDetail } from "../api/pokedex-api";
+import type { PokemonDetail } from "../types/pokemon";
+import { LoadingSpinner } from "../components/ui/loading-spinner";
+import { ErrorMessage } from "../components/ui/error-message";
+import { Button } from "../components/ui/button";
+import { PokemonImage } from "../components/pokemon/pokemon-image";
 import { PokemonInfo } from "./pokemon-info";
 import { PokemonTypes } from "./pokemon-types";
 import { PokemonAbilities } from "./pokemon-abilities";
 import { PokemonStats } from "./pokemon-stats";
 import { PokemonDetails } from "./pokemon-details";
-import { getPokemonImageUrl, getFallbackPokemonImageUrl } from "../../utils/string";
+import { getPokemonImageUrl, getFallbackPokemonImageUrl } from "../utils/string";
 
 export function Pokemon() {
   const { id } = useParams();

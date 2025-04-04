@@ -1,6 +1,6 @@
 import React from 'react';
-import type { PokemonType } from '../../types/pokemon';
-import { PokemonTypeFlag } from './pokemon-type-flag';
+import type { PokemonType } from '../types/pokemon';
+import { PokemonTypeFlag } from '../components/pokemon/pokemon-type-flag';
 
 interface PokemonTypesProps {
   types: PokemonType[];
