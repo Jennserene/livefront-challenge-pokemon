@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen, waitFor } from '~/utils/test/test-utils';
-import { PokemonList } from '../pokemon-list';
-import { getPokemonList } from '../../../api/pokedex-api';
+import { PokedexList } from '../pokedex-list';
+import { getPokemonList } from '../../api/pokedex-api';
 import { MemoryRouter } from 'react-router';
 
 jest.mock('../../../api/pokedex-api');
 
-describe('PokemonList', () => {
+describe('PokedexList', () => {
   const mockPokemonList = {
     results: [
       { name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/' },
@@ -23,7 +23,7 @@ describe('PokemonList', () => {
     
     render(
       <MemoryRouter>
-        <PokemonList />
+        <PokedexList />
       </MemoryRouter>
     );
     
@@ -35,7 +35,7 @@ describe('PokemonList', () => {
     
     render(
       <MemoryRouter>
-        <PokemonList />
+        <PokedexList />
       </MemoryRouter>
     );
 
@@ -51,7 +51,7 @@ describe('PokemonList', () => {
     
     render(
       <MemoryRouter>
-        <PokemonList />
+        <PokedexList />
       </MemoryRouter>
     );
 
@@ -68,7 +68,7 @@ describe('PokemonList', () => {
     
     render(
       <MemoryRouter>
-        <PokemonList limit={10} offset={20} />
+        <PokedexList limit={10} offset={20} />
       </MemoryRouter>
     );
 

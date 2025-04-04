@@ -13,7 +13,7 @@ import { PokemonStats } from "./pokemon-stats";
 import { PokemonDetails } from "./pokemon-details";
 import { getPokemonImageUrl, getFallbackPokemonImageUrl } from "../../utils/string";
 
-export function PokemonDetailView() {
+export function Pokemon() {
   const { id } = useParams();
   const [pokemonData, setPokemonData] = useState<PokemonDetail | null>(null);
   const [loading, setLoading] = useState(true);

@@ -1,5 +1,5 @@
 import React from "react";
-import { PokemonDetailView } from "../components/pokemon/pokemon-detail-view";
+import { Pokemon } from "../components/pokemon/pokemon";
 
 export function meta({ params }: { params: { id: string } }) {
   return [
@@ -9,5 +9,5 @@ export function meta({ params }: { params: { id: string } }) {
 }
 
 export default function PokemonDetail() {
-  return <PokemonDetailView />;
+  return <Pokemon />;
 }

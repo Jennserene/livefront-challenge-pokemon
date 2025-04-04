@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, waitFor } from '~/utils/test/test-utils';
-import { PokemonDetailView } from '../pokemon-detail-view';
+import { Pokemon } from '../pokemon';
 import { getPokemonDetail } from '../../../api/pokedex-api';
 import { MemoryRouter } from 'react-router';
 import * as router from 'react-router';
@@ -13,7 +13,7 @@ jest.mock('react-router', () => ({
   useParams: jest.fn(),
 }));
 
-describe('PokemonDetailView', () => {
+describe('Pokemon', () => {
   const mockPokemonDetail = {
     id: 25,
     name: 'pikachu',
@@ -45,7 +45,7 @@ describe('PokemonDetailView', () => {
     
     render(
       <MemoryRouter>
-        <PokemonDetailView />
+        <Pokemon />
       </MemoryRouter>
     );
     
@@ -57,7 +57,7 @@ describe('PokemonDetailView', () => {
     
     render(
       <MemoryRouter>
-        <PokemonDetailView />
+        <Pokemon />
       </MemoryRouter>
     );
 
@@ -74,7 +74,7 @@ describe('PokemonDetailView', () => {
     
     render(
       <MemoryRouter>
-        <PokemonDetailView />
+        <Pokemon />
       </MemoryRouter>
     );
 

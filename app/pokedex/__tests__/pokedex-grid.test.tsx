@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, screen } from '~/utils/test/test-utils';
-import { PokemonGrid } from '../pokemon-grid';
+import { PokedexGrid } from '../pokedex-grid';
 import { MemoryRouter } from 'react-router';
 import type { PokemonDetail, PokemonListItem } from '~/types/pokemon';
 
-describe('PokemonGrid', () => {
+describe('PokedexGrid', () => {
   const mockPokemon = [
     { name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon/1/' },
     { name: 'charmander', url: 'https://pokeapi.co/api/v2/pokemon/4/' }
@@ -68,7 +68,7 @@ describe('PokemonGrid', () => {
   it('renders grid of pokemon cards', () => {
     render(
       <MemoryRouter>
-        <PokemonGrid pokemon={mockPokemon} pokemonDetails={mockPokemonDetails} />
+        <PokedexGrid pokemon={mockPokemon} pokemonDetails={mockPokemonDetails} />
       </MemoryRouter>
     );
 
@@ -79,7 +79,7 @@ describe('PokemonGrid', () => {
   it('renders grid with correct layout classes', () => {
     const { container } = render(
       <MemoryRouter>
-        <PokemonGrid pokemon={mockPokemon} pokemonDetails={mockPokemonDetails} />
+        <PokedexGrid pokemon={mockPokemon} pokemonDetails={mockPokemonDetails} />
       </MemoryRouter>
     );
 
@@ -99,7 +99,7 @@ describe('PokemonGrid', () => {
   it('shows "No Pokemon found" message when pokemon list is empty', () => {
     render(
       <MemoryRouter>
-        <PokemonGrid pokemon={[]} pokemonDetails={{}} />
+        <PokedexGrid pokemon={[]} pokemonDetails={{}} />
       </MemoryRouter>
     );
 
